@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnterData.PersonalDataFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dialog_padding"
+            android:paddingLeft="@dimen/dialog_padding"
+            android:paddingRight="@dimen/dialog_padding"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:layout_marginBottom="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_title" />
+
+            <EditText
+                android:id="@+id/personalIDET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:inputType="number"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"/>
+
+            <EditText
+                android:id="@+id/personalFNET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"/>
+
+            <EditText
+                android:id="@+id/personalLNET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"/>
+
+            <EditText
+                android:id="@+id/personalBDET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Birth Date: dd-MM-yyyy"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"/>
+
+            <EditText
+                android:id="@+id/personalPhoneET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

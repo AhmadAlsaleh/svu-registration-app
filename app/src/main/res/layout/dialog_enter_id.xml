@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/enterIDLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your ID to Start"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dialog_title"/>
+
+        <EditText
+            android:id="@+id/enterIDET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your ID"
+            android:textSize="@dimen/dialog_text"
+            android:layout_marginTop="@dimen/dialog_padding"/>
+
+        <Button
+            android:id="@+id/enterIDBTN"
+            android:layout_marginTop="@dimen/dialog_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textSize="@dimen/main_btn"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_primary_background"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/showInfoLL"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to SVU"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dialog_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use this information to login"
+            android:textSize="@dimen/dialog_text"/>
+
+        <TextView
+            android:id="@+id/showInfoUsernameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username: ahmad_alsaleh"
+            android:layout_marginTop="@dimen/dialog_padding"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/dialog_text"/>
+
+        <TextView
+            android:id="@+id/showInfoPasswordTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="password: 16248"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/dialog_text"/>
+
+        <Button
+            android:id="@+id/showInfoBTN"
+            android:layout_marginTop="@dimen/dialog_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="@dimen/main_btn"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_primary_background"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
