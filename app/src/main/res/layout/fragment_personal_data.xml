@@ -31,6 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ID"
+                android:clickable="false"
+                android:focusable="false"
                 android:inputType="number"
                 android:layout_marginTop="@dimen/dialog_padding"
                 android:textSize="@dimen/dialog_text"/>

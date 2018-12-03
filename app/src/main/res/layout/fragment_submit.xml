@@ -49,8 +49,7 @@
                 android:layout_height="wrap_content"
                 android:text="Submit"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/main_btn"
-                android:background="@drawable/btn_primary_background"/>
+                android:textSize="@dimen/main_btn" />
 
         </LinearLayout>
 

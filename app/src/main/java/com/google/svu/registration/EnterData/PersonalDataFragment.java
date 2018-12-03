@@ -2,9 +2,13 @@ package com.google.svu.registration.EnterData;
 
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +17,11 @@ import android.widget.Toast;
 
 import com.google.svu.registration.EnterDataActivity;
 import com.google.svu.registration.R;
+import com.google.svu.registration.StaticMethods;
+import com.google.svu.registration.StaticsVars;
 
 @SuppressLint("ValidFragment")
-public class PersonalDataFragment extends Fragment {
+public class PersonalDataFragment extends Fragment implements TextWatcher {
 
     EditText id, fName, lName, birthDate, phone;
     private View view;
@@ -39,11 +45,18 @@ public class PersonalDataFragment extends Fragment {
         birthDate = view.findViewById(R.id.personalBDET);
         phone = view.findViewById(R.id.personalPhoneET);
 
-        id.setText(enterDataActivity.getId());
+        SharedPreferences preferences = enterDataActivity.getSharedPreferences(StaticsVars.name, Context.MODE_PRIVATE);
+        id.setText(preferences.getString("id", ""));
         fName.setText(enterDataActivity.getfName());
         lName.setText(enterDataActivity.getlName());
         birthDate.setText(enterDataActivity.getBirthDate());
         phone.setText(enterDataActivity.getPhone());
+
+        id.addTextChangedListener(this);
+        fName.addTextChangedListener(this);
+        lName.addTextChangedListener(this);
+        birthDate.addTextChangedListener(this);
+        phone.addTextChangedListener(this);
 
         return view;
     }
@@ -114,5 +127,20 @@ public class PersonalDataFragment extends Fragment {
 
     public void setPhone(String phone) {
         this.phone.setText(phone);
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+        StaticMethods.checkClickSound(getActivity());
     }
 }

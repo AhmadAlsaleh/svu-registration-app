@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
@@ -6,7 +6,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/btn1</item>
         <item name="android:textColor">@color/colorPrimary</item>
+        <item name="buttonStyle" tools:ignore="DuplicateDefinition">@style/btn1</item>
+    </style>
+
+    <style name="btn1" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme5" parent="Base.Theme.AppCompat.Light.DarkActionBar">
@@ -15,6 +21,11 @@
         <item name="colorPrimaryDark">@color/red</item>
         <item name="colorAccent">#4e0000</item>
         <item name="android:textColor">@color/red</item>
+        <item name="buttonStyle">@style/btn2</item>
+    </style>
+
+    <style name="btn2" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/red</item>
     </style>
 
     <style name="AppTheme2" parent="Base.Theme.AppCompat.Light.DarkActionBar">
@@ -23,7 +34,13 @@
         <item name="colorPrimaryDark">@color/pink</item>
         <item name="colorAccent">#58006c</item>
         <item name="android:textColor">@color/pink</item>
+        <item name="buttonStyle">@style/btn3</item>
     </style>
+
+    <style name="btn3" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/pink</item>
+    </style>
+
 
     <style name="AppTheme3" parent="Base.Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -31,6 +48,11 @@
         <item name="colorPrimaryDark">@color/green</item>
         <item name="colorAccent">#005813</item>
         <item name="android:textColor">@color/green</item>
+        <item name="buttonStyle">@style/btn4</item>
+    </style>
+
+    <style name="btn4" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/green</item>
     </style>
 
     <style name="AppTheme4" parent="Base.Theme.AppCompat.Light.DarkActionBar">
@@ -39,6 +61,11 @@
         <item name="colorPrimaryDark">@color/yellow</item>
         <item name="colorAccent">#5e5b00</item>
         <item name="android:textColor">@color/yellow</item>
+        <item name="buttonStyle">@style/btn5</item>
+    </style>
+
+    <style name="btn5" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/yellow</item>
     </style>
 
 

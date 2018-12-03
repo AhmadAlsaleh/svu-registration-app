@@ -118,7 +118,6 @@ public class EnterDataActivity extends AppCompatActivity {
         previousFAB = findViewById(R.id.previousFAB);
         previousFAB.setVisibility(View.GONE);
 
-
         final PersonalDataFragment personalDataFragment = new PersonalDataFragment(this);
         final UniversityDataFragment universityDataFragment = new UniversityDataFragment(this);
         final SubmitFragment submitFragment = new SubmitFragment(this);
@@ -159,6 +158,18 @@ public class EnterDataActivity extends AppCompatActivity {
 
         });
 
+        SharedPreferences sharedPreferencesIn = getSharedPreferences(StaticsVars.name, Context.MODE_PRIVATE);
+        id = sharedPreferencesIn.getString("_id", "");
+        fName = sharedPreferencesIn.getString("_fName", "");
+        lName = sharedPreferencesIn.getString("_lName", "");
+        phone = sharedPreferencesIn.getString("_phone", "");
+        birthDate = sharedPreferencesIn.getString("_birth", "");
+
+        certificateString = sharedPreferencesIn.getString("_cs", "");
+        certificateStringDate = sharedPreferencesIn.getString("_cd", "");
+        certificateStringDegree = sharedPreferencesIn.getString("_cde", "");
+        certificateStringEnglish = sharedPreferencesIn.getString("_ce", "");
+
         nextFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -171,6 +182,15 @@ public class EnterDataActivity extends AppCompatActivity {
                         lName = personalDataFragment.getlName();
                         phone = personalDataFragment.getPhone();
                         birthDate = personalDataFragment.getBirthDate();
+
+                        SharedPreferences.Editor sharedPreferences = getSharedPreferences(StaticsVars.name, Context.MODE_PRIVATE).edit();
+                        sharedPreferences.putString("_id", id);
+                        sharedPreferences.putString("_fName", fName);
+                        sharedPreferences.putString("_lName", lName);
+                        sharedPreferences.putString("_phone", phone);
+                        sharedPreferences.putString("_birth", birthDate);
+                        sharedPreferences.apply();
+
                         viewPage.setCurrentItem(viewPage.getCurrentItem() + 1);
 
                     }
@@ -180,6 +200,14 @@ public class EnterDataActivity extends AppCompatActivity {
                         certificateStringDate = universityDataFragment.getCertificateDateET();
                         certificateStringDegree = universityDataFragment.getCertificateDegreeET();
                         certificateStringEnglish = universityDataFragment.getCertificateEnglishET();
+
+                        SharedPreferences.Editor sharedPreferences = getSharedPreferences(StaticsVars.name, Context.MODE_PRIVATE).edit();
+                        sharedPreferences.putString("_cs", certificateString);
+                        sharedPreferences.putString("_cd", certificateStringDate);
+                        sharedPreferences.putString("_cde", certificateStringDegree);
+                        sharedPreferences.putString("_ce", certificateStringEnglish);
+                        sharedPreferences.apply();
+
                         viewPage.setCurrentItem(viewPage.getCurrentItem() + 1);
 
                         submitFragment.setPersonal("ID: " + id + "\n"

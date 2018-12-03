@@ -12,6 +12,9 @@ public class LauncherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getSharedPreferences(StaticsVars.name, Context.MODE_PRIVATE);
+        int theme = preferences.getInt(StaticsVars.theme, R.style.AppTheme);
+        setTheme(theme);
         setContentView(R.layout.activity_launcher);
 
         Handler handler = new Handler();

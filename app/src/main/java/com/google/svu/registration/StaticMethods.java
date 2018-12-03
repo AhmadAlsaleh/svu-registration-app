@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class StaticMethods {
 
-    public static String getRandomString(int i) {
+    public static String getRandomString(int i) { //
 
         String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
         StringBuilder stringBuilder = new StringBuilder();

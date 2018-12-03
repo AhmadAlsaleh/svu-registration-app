@@ -64,8 +64,8 @@
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:textSize="@dimen/main_btn_x"
-                android:textColor="@android:color/white"
-                android:background="@drawable/btn_primary_background"/>
+                android:padding="@dimen/dialog_padding"
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/newUserTV"

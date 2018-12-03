@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Qualifications"
+            android:textSize="@dimen/dialog_title"/>
+
+        <RadioGroup
+            android:id="@+id/checkRG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/secondaryL70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"
+                android:text="Secondary Certificate less 70%"/>
+
+            <RadioButton
+                android:id="@+id/secondaryM70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"
+                android:text="Secondary Certificate more 70%"/>
+
+            <RadioButton
+                android:id="@+id/collageD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"
+                android:text="Collage Degree"/>
+
+            <RadioButton
+                android:id="@+id/diplomaD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dialog_padding"
+                android:textSize="@dimen/dialog_text"
+                android:text="Diploma Degree"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/startBTN"
+            android:layout_marginTop="@dimen/dialog_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textSize="@dimen/main_btn"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

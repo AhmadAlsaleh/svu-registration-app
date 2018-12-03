@@ -106,11 +106,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/list_padding"
+                android:padding="@dimen/dialog_padding"
                 android:layout_gravity="center"
                 android:text="Apply"
                 android:textSize="@dimen/main_btn"
-                android:textColor="@android:color/white"
-                android:background="@drawable/btn_primary_background"/>
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 

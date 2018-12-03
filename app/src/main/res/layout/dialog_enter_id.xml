@@ -16,7 +16,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enter Your ID to Start"
-            android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dialog_title"/>
 
         <EditText
@@ -34,8 +33,8 @@
             android:layout_height="wrap_content"
             android:text="Start"
             android:textSize="@dimen/main_btn"
-            android:textColor="@android:color/white"
-            android:background="@drawable/btn_primary_background"/>
+            android:padding="@dimen/dialog_padding"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 
@@ -85,8 +84,8 @@
             android:layout_height="wrap_content"
             android:text="Done"
             android:textSize="@dimen/main_btn"
-            android:textColor="@android:color/white"
-            android:background="@drawable/btn_primary_background"/>
+            android:padding="@dimen/dialog_padding"
+            android:textColor="@android:color/white" />
 
 
     </LinearLayout>

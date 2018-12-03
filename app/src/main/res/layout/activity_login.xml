@@ -64,14 +64,14 @@
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:textSize="@dimen/main_btn"
-                android:textColor="@android:color/white"
-                android:background="@drawable/btn_primary_background"/>
-
+                android:padding="@dimen/dialog_padding"
+                android:textColor="@android:color/white" />
             <TextView
                 android:id="@+id/newUserTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dialog_padding"
+                android:padding="@dimen/dialog_padding"
                 android:text="Register New Student"
                 android:textSize="@dimen/dialog_text"/>
 

@@ -26,8 +26,10 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getSharedPreferences(StaticsVars.name, Context.MODE_PRIVATE);
+        int theme = preferences.getInt(StaticsVars.theme, R.style.AppTheme);
+        setTheme(theme);
         setContentView(R.layout.activity_login);
-
         getSupportActionBar().setTitle("Login");
 
         usernameET = findViewById(R.id.loginUsernameET);

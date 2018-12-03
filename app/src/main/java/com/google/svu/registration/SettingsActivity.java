@@ -45,23 +45,18 @@ public class SettingsActivity extends AppCompatActivity {
         switch (themeSelected) {
             case R.style.AppTheme:
                 theme1.setChecked(true);
-                applyBTN.setBackgroundResource(R.drawable.btn_primary_background);
                 break;
             case R.style.AppTheme2:
                 theme2.setChecked(true);
-                applyBTN.setBackgroundResource(R.drawable.btn_primary2_background);
                 break;
             case R.style.AppTheme3:
                 theme3.setChecked(true);
-                applyBTN.setBackgroundResource(R.drawable.btn_primary3_background);
                 break;
             case R.style.AppTheme4:
                 theme4.setChecked(true);
-                applyBTN.setBackgroundResource(R.drawable.btn_primary4_background);
                 break;
             case R.style.AppTheme5:
                 theme5.setChecked(true);
-                applyBTN.setBackgroundResource(R.drawable.btn_primary5_background);
                 break;
         }
         soundCB.setChecked(preferences.getBoolean(StaticsVars.sound, true));
